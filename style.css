@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #001c22;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #225f42;
+    border-radius: 10px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    width: 100%;
+    padding: 25px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 1;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+nav.scrolled {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav span {
+    font-size: 24px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #00ff88, #00ff88, #87ebff, #87ebff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 300;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li .icone {
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li .icone:hover {
+    background: linear-gradient(135deg, #00ff88, #87ebff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background: linear-gradient(135deg, #00ff88, #87ebff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(135deg, #00ff88, #87ebff);
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 110%;
+}
+
+body {
+    background: radial-gradient(ellipse 200% 200% at 50% 0%, #143b29, #001c22 25%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#inicio {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#inicio .titulo_inicio {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inicio .titulo_inicio h1 {
+    font-size: 80px;
+    font-weight: 100;
+}
+
+#inicio .titulo_inicio #slogan {
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #00ff88;
+    padding-right: 5px;
+    background: linear-gradient(135deg, #00ff88, #00ff88, #87ebff, #87ebff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#typing-text {
+    background: linear-gradient(135deg, #00ff88, #87ebff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: blink 0.75s step-end infinite;
+    font-weight: bold;
+}
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        border-color: transparent;
+    }
+
+    25%,
+    75% {
+        border-color: #00ff88;
+    }
+}
+
+
+#inicio .titulo_inicio p {
+    margin-top: 20px;
+    font-size: 15px;
+    width: 50%;
+}
+
+#inicio .botao_ver_projetos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+#inicio .botao_ver_projetos #ver_projetos {
+    width: 10%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #008245, #0085a0);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+#inicio .botao_ver_projetos #ver_projetos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px 1px #008245;
+}
+
+#inicio .botao_ver_projetos #contato_botao {
+    width: 10%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    background-image:
+        linear-gradient(#001c22, #001c22),
+        linear-gradient(135deg, #008245, #0085a0);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+#inicio .botao_ver_projetos #contato_botao:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px 1px #008245;
+}
+
+#sobre {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 20px;
+    gap: 80px;
+}
+
+#sobre .card_sobre {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 35%;
+    padding: 40px;
+    border-radius: 16px;
+    background-color: #001c22;
+    box-shadow: 0 0 20px #008245;
+}
+
+#sobre .card_sobre .titulo_sobre {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#sobre .card_sobre .titulo_sobre h1 {
+    font-size: 30px;
+    background: linear-gradient(135deg, #00ff88, #87ebff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#sobre .card_sobre .icone_user {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 25px;
+}
+
+#sobre .card_sobre .conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sobre .card_sobre .conteudo img {
+    width: 300px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background-image:
+        linear-gradient(#001c22, #001c22),
+        linear-gradient(135deg, #008245, #0085a0);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    transition: 0.3s ease-in-out;
+}
+
+#sobre .card_sobre img:hover {
+    transform: scale(1.01);
+    filter: drop-shadow(0 0 20px #008245);
+}
+
+#sobre .card_sobre p {
+    margin-top: 30px;
+    font-size: 13px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+hr {
+    border: 1px solid transparent;
+    background-image:
+        linear-gradient(#001c22, #001c22),
+        linear-gradient(135deg, #008245, #0085a0);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    transition: 0.3s ease-in-out;
+}
+
+#sobre .card_habilidade {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 35%;
+    padding: 40px;
+    border-radius: 16px;
+    background-color: #001c22;
+    box-shadow: 0 0 20px #008245;
+}
+
+#sobre .card_habilidade .titulo_habilidade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#sobre .card_habilidade .titulo_habilidade h1 {
+    font-size: 30px;
+    background: linear-gradient(135deg, #00ff88, #87ebff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+#sobre .card_habilidade .icone_user {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 25px;
+}
+
+
+#sobre .habilidades_lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    width: 120px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.card i {
+    font-size: 40px;
+    color: #00ff88;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+}
