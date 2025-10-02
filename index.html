@@ -16,6 +16,8 @@
         <ul>
             <li><a href="#inicio">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#habilidade">Habilidades</a></li>
+            <li><a href="#certificacao">Certificaçoes</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#contato">Contato</a></li>
             <li>
@@ -74,57 +76,68 @@
                     </div>
                 </div>
                 <hr>
-                <div class="card_habilidade">
-                    <div class="titulo_habilidade">
-                        <i class="fa-solid fa-laptop-code icone_user"></i>
-                        <h1>Minhas habilidades</h1>
+            </div>
+        </section>
+        <section id="habilidade">
+            <div class="titulo_habilidade">
+                <h1>Minhas Habilidades</h1>
+                <p>Um pouco da minha história, especializações e serviços que ofereço.</p>
+            </div>
+            <div class="card_habilidade">
+                <div class="habilidades_lista">
+                    <div class="card">
+                        <i class="fa-brands fa-html5"></i>
+                        <p>HTML</p>
                     </div>
-
-                    <div class="habilidades_lista">
-                        <div class="card">
-                            <i class="fa-brands fa-html5"></i>
-                            <p>HTML</p>
-                        </div>
-                        <div class="card">
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <p>CSS</p>
-                        </div>
-                        <div class="card">
-                            <i class="fa-brands fa-js-square"></i>
-                            <p>JavaScript</p>
-                        </div>
-                        <div class="card">
-                            <i class="fa-brands fa-node-js"></i>
-                            <p>Node.js</p>
-                        </div>
-                        <div class="card">
-                            <i class="fa-brands fa-react"></i>
-                            <p>React</p>
-                        </div>
-                        <div class="card">
-                            <i class="fa-brands fa-react"></i>
-                            <p>React Native</p>
-                        </div>
-                        <div class="card">
-                            <i class="fa-brands fa-php"></i>
-                            <p>PHP</p>
-                        </div>
-                        <div class="card">
-                            <i class="fa-solid fa-database"></i>
-                            <p>MySQL</p>
-                        </div>
-                        <div class="card">
-                            <i class="fa-brands fa-google"></i>
-                            <p>Firebase</p>
-                        </div>
-                        <div class="card">
-                            <i class="fa-brands fa-js"></i>
-                            <p>TypeScript</p>
-                        </div>
+                    <div class="card">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <p>CSS</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-brands fa-js-square"></i>
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-brands fa-node-js"></i>
+                        <p>Node.js</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-brands fa-python"></i>
+                        <p>Python</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-brands fa-aws"></i>
+                        <p>Cloud Computing</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-brands fa-react"></i>
+                        <p>React Native</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-brands fa-php"></i>
+                        <p>PHP</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-database"></i>
+                        <p>MySQL</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-brands fa-git"></i>
+                        <p>Git</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-brands fa-github"></i>
+                        <p>Github</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-brands fa-linux"></i>
+                        <p>Linux</p>
                     </div>
                 </div>
             </div>
-            <div class="certificcacoes">
+        </section>
+        <section id="certificacao">
+            <div class="certificacoes">
                 <div class="titulo_certificacoes">
                     <h1>Certificações</h1>
                     <p>Aqui estão alguns dos principais certificados que conquistei ao longo da minha trajetória
@@ -228,14 +241,14 @@
                         <a href="google.com" id="ver_projetos" target="_blank">Ver Projeto</a>
                     </div>
                 </div>
-                <div class="projeto">
+                <div class="projeto softdev">
                     <div class="imagem">
-                        <img src="img/image.png" alt="">
+                        <img id="softdev" src="img/softdev.png" alt="">
                     </div>
                     <div class="conteudo">
-                        <h1>Academia</h1>
-                        <p>Site destinao a bla bla bla</p>
-                        <p>Principais tecnolgias utilizadas:</p>
+                        <h1>Matemática Financeira</h1>
+                        <p>Uma ferramenta prática para simplificar o controle financeiro diário, ajudando na organização
+                            das despesas e promovendo o bem-estar financeiro de seus usuários.</p>
                     </div>
                     <div class="botao_projeto">
                         <a href="google.com" id="ver_projetos" target="_blank">Ver Projeto</a>
@@ -244,7 +257,47 @@
             </div>
         </section>
         <section id="contato">
-
+            <div class="container-contato">
+                <div class="contato-titulo">
+                    <h2>Fale Conosco</h2>
+                    <p>Entre em contato e vamos transformar ideias em soluções inovadoras juntos.</p>
+                </div>
+                <div class="contato-content">
+                    <form class="form-contato" action="#" method="POST">
+                        <div class="input-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="assunto">Assunto</label>
+                            <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" rows="6"
+                                required></textarea>
+                        </div>
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
+                    <div class="contato-info">
+                        <h3>Informações de Contato</h3>
+                        <p><i class="fa-solid fa-envelope"></i> meuemail@exemplo.com</p>
+                        <p><i class="fa-solid fa-phone"></i> +55 (00) 00000-0000</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Cidade, Estado, Brasil</p>
+                        <div class="contato-socials">
+                            <a href="https://github.com/kbf0k" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer></footer>

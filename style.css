@@ -32,7 +32,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     color: white;
-    z-index: 1;
+    z-index: 999;
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -45,7 +45,7 @@ nav.scrolled {
 nav ul {
     display: flex;
     justify-content: center;
-    width: 40%;
+    width: 50%;
     list-style: none;
     display: flex;
     align-items: center;
@@ -230,16 +230,15 @@ main {
 }
 
 #sobre {
-    min-height: 170vh;
+    min-height: 120vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
 #sobre .titulo_sobre h1 {
     font-size: 35px;
-    background: linear-gradient(135deg, white, white, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), #004f2a, #004f2a);
+    background: linear-gradient(135deg, white, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), #004f2a, #004f2a, #004f2a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -248,14 +247,17 @@ main {
 #sobre .titulo_sobre p {
     font-size: 15px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 
 #sobre .card_container {
-    gap: 40px;
     display: flex;
-    padding: 50px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
     width: 100%;
 }
 
@@ -263,13 +265,9 @@ main {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    width: 50%;
-    height: 450px;
     padding: 40px;
+    width: 70%;
     border-radius: 16px;
-    background-color: #143b2943;
     background: radial-gradient(ellipse 200% 200% at 50% 0%, #16412d, #143b2943 25%);
     transition: 0.3s ease-in-out;
     outline: none;
@@ -281,19 +279,17 @@ main {
 
 #sobre .card_sobre .titulo_sobre {
     display: flex;
-    align-items: center;
     gap: 10px;
 }
 
 #sobre .card_sobre .titulo_sobre h1 {
-    font-size: 25px;
+    font-size: 15px;
     background: linear-gradient(135deg, #00ff88, #87ebff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 #sobre .card_sobre .icone_user {
-    color: rgba(255, 255, 255, 0.7);
     font-size: 20px;
 }
 
@@ -301,10 +297,11 @@ main {
     display: flex;
     align-items: center;
     gap: 50px;
+    margin-top: 30px;
 }
 
 #sobre .card_sobre .conteudo img {
-    width: 250px;
+    width: 300px;
     border-radius: 50%;
     border: 3px solid transparent;
     background-image:
@@ -336,30 +333,49 @@ hr {
     transition: 0.3s ease-in-out;
 }
 
-#sobre .card_habilidade {
+
+#habilidade {
+    min-height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#habilidade .titulo_habilidade h1 {
+    font-size: 35px;
+    background: linear-gradient(135deg, white, white, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), #004f2a, #004f2a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+#habilidade .titulo_habilidade p {
+    font-size: 15px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+#habilidade .card_habilidade {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    width: 50%;
     padding: 40px;
-    height: 450px;
     border-radius: 16px;
-    background: radial-gradient(ellipse 200% 200% at 50% 100%, #16412d, #143b2943 25%);
     transition: 0.3s ease-in-out;
+    outline: none;
 }
 
-#sobre .card_habilidade:hover {
-    box-shadow: 0 0 2px 2px #00ff8871;
-}
-
-#sobre .card_habilidade .titulo_habilidade {
+#habilidade .card_habilidade .titulo_habilidade {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-#sobre .card_habilidade .titulo_habilidade h1 {
+#habilidade .card_habilidade .titulo_habilidade h1 {
     font-size: 25px;
     background: linear-gradient(135deg, #00ff88, #87ebff);
     -webkit-background-clip: text;
@@ -367,20 +383,20 @@ hr {
 }
 
 
-#sobre .card_habilidade .icone_user {
+#habilidade .card_habilidade .icone_user {
     color: rgba(255, 255, 255, 0.7);
     font-size: 20px;
 }
 
 
-#sobre .habilidades_lista {
+#habilidade .habilidades_lista {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.card {
+#habilidade .card_habilidade .habilidades_lista .card {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -388,34 +404,46 @@ hr {
     background: rgba(255, 255, 255, 0.05);
     padding: 20px;
     border-radius: 10px;
-    width: 100px;
-    transition: transform 0.3s ease-in-out;
+    width: 20%;
+    transition: 0.3s ease-in-out;
     text-align: center;
 }
 
-.card i {
+#habilidade .card_habilidade .habilidades_lista .card:hover {
+    box-shadow: 0 0 2px 2px #00ff8871;
+}
+
+#habilidade .card_habilidade .habilidades_lista .card i {
     font-size: 40px;
     color: #00ff88;
     margin-bottom: 10px;
 }
 
-.card p {
+#habilidade .card_habilidade .habilidades_lista .card p {
     font-size: 14px;
     font-weight: bold;
     color: white;
 }
 
-.card:hover {
+#habilidade .card_habilidade .habilidades_lista .card:hover {
     transform: scale(1.05);
     background: rgba(255, 255, 255, 0.1);
 }
 
-.certificcacoes {
+#certificacao {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.certificacoes {
     margin-top: 30px;
     width: 100%;
 }
 
-.certificcacoes .titulo_certificacoes h1 {
+.certificacoes .titulo_certificacoes h1 {
     margin-top: 20px;
     font-size: 35px;
     background: linear-gradient(135deg, white, white, rgba(255, 255, 255, 0.8), #004f2a, #004f2a);
@@ -424,13 +452,13 @@ hr {
     text-align: center;
 }
 
-.certificcacoes .titulo_certificacoes p {
+.certificacoes .titulo_certificacoes p {
     font-size: 15px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.certificcacoes .linha {
+.certificacoes .linha {
     background-color: #001c22;
     box-shadow: inset 0px 0px 40px 20px black;
     width: 100%;
@@ -444,13 +472,13 @@ hr {
     border-bottom: 3px solid black;
 }
 
-.certificcacoes .slider {
+.certificacoes .slider {
     display: flex;
     gap: 100px;
     animation: deslizar 25s linear infinite;
 }
 
-.certificcacoes .linha img {
+.certificacoes .linha img {
     width: 200px;
     filter: drop-shadow(2px 4px 6px black) opacity(0.8) contrast(120%);
 }
@@ -468,7 +496,7 @@ hr {
 
 
 #projetos {
-    min-height: 140vh;
+    min-height: 170vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -488,7 +516,7 @@ hr {
 #projetos .titulo_projetos p {
     font-size: 15px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 #projetos .container_projetos {
@@ -550,6 +578,14 @@ hr {
 
 #projetos .container_projetos .techwoman .imagem #techwoman {
     width: 80%;
+}
+
+#projetos .container_projetos .softdev .imagem {
+    background: radial-gradient(ellipse 200% 200% at 50% 0%, #1e615b, #103634 25%);
+}
+
+#projetos .container_projetos .softdev .imagem #softdev {
+    width: 50%;
 }
 
 #projetos .container_projetos .projeto .imagem img {
@@ -629,4 +665,128 @@ hr {
     flex-direction: column;
     padding: 80px;
     width: 100%;
+}
+
+
+.container-contato {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.contato-titulo h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, white, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), #004f2a, #004f2a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contato-titulo p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Layout do formulário e informações lado a lado */
+.contato-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Formulário */
+.form-contato {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.input-group input,
+.input-group textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: 2px solid #00ff88;
+    background-color: rgba(0, 255, 136, 0.1);
+}
+
+button[type="submit"] {
+    padding: 15px;
+    background: linear-gradient(135deg, #008245, #0085a0);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #00ff88;
+}
+
+/* Informações de contato */
+.contato-info {
+    flex: 0.4;
+    min-width: 250px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contato-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #00ff88, #87ebff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contato-info p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contato-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contato-socials a {
+    font-size: 24px;
+    color: #00ff88;
+    transition: 0.3s;
+}
+
+.contato-socials a:hover {
+    color: #87ebff;
+    transform: scale(1.2);
 }
