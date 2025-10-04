@@ -817,3 +817,225 @@ footer #direitos {
     opacity: 1;
     transform: translateY(0);
 }
+
+#btn-mobile {
+    display: none;
+}
+
+/* BOTÃO BACK TO TOP */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00ff88, #87ebff);
+    color: #001c22;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    box-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
+}
+
+/* Mostrar quando aparecer */
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Efeito hover */
+#backToTop:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+}
+
+@media (max-width:1024px) {
+
+    .navbar ul {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .navbar.active ul {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Suavizar o sumir também */
+    .navbar.closing ul {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    nav span {
+        width: 50%;
+    }
+
+    /* NAVBAR — fundo transparente com blur */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        transition: background 0.3s ease;
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        transition: all 0.3s ease;
+    }
+
+    .navbar.active ul {
+        display: flex;
+    }
+
+    /* Botão hamburguer */
+    #btn-mobile {
+        display: flex;
+        top: 35px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 1000;
+        right: 50px;
+        position: absolute;
+    }
+
+    /* HAMBURGUER LINES COM GRADIENTE */
+    #hamburger,
+    #hamburger::before,
+    #hamburger::after {
+        width: 25px;
+        height: 2px;
+        background: linear-gradient(135deg, #00ff88, #87ebff);
+        position: relative;
+        transition: 0.3s;
+        border-radius: 10px;
+        display: block;
+    }
+
+    #hamburger::before,
+    #hamburger::after {
+        content: '';
+        position: absolute;
+        left: 0;
+    }
+
+    #hamburger::before {
+        top: -8px;
+    }
+
+    #hamburger::after {
+        top: 8px;
+    }
+
+    /* Animação do "X" */
+    .navbar.active #hamburger {
+        background: transparent;
+    }
+
+    .navbar.active #hamburger::before {
+        transform: rotate(45deg);
+        top: 0;
+        background: linear-gradient(135deg, #00ff88, #87ebff);
+    }
+
+    .navbar.active #hamburger::after {
+        transform: rotate(-45deg);
+        top: 0;
+        background: linear-gradient(135deg, #00ff88, #87ebff);
+    }
+
+    /* Responsividade geral */
+    header {
+        display: flex;
+    }
+
+    .inicio_titulo h1 {
+        font-size: 40px;
+    }
+
+    #slogan_text {
+        font-size: 14px;
+    }
+
+    .inicio_titulo p {
+        width: 80%;
+    }
+
+    .inicio_botoes {
+        padding: 30px;
+    }
+
+    #btn_ver_projetos,
+    #btn_contato {
+        width: 100%;
+    }
+
+    .sobre_foto {
+        width: 100%;
+    }
+
+    .projeto_card {
+        width: 100%;
+    }
+
+    .projeto_card,
+    .projeto_content {
+        text-align: center;
+    }
+
+    .projeto_card .projeto_btn a {
+        width: 50%;
+    }
+
+    .container-contato {
+        width: 100%;
+    }
+
+    .contato-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-contato {
+        width: 100%;
+    }
+
+    .contato-info {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .contato-info p {
+        gap: 8px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+}

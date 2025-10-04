@@ -62,7 +62,7 @@ const observer = new IntersectionObserver(
         });
     },
     {
-        threshold: 0.3, // 30% visível para ativar
+        threshold: 0., // 30% visível para ativar
     }
 );
 

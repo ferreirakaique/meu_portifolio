@@ -11,32 +11,41 @@
 </head>
 
 <body>
-    <nav>
-        <span>ferreirakaique</span>
-        <ul>
-            <li><a href="#inicio_sec">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#certificacoes">Certificações</a></li>
-            <li><a href="#projetos_sec">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li>
-                <a href="https://github.com/kbf0k" target="_blank">
-                    <i class="fa-brands fa-github icone"></i>
-                </a> |
-                <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">
-                    <i class="fa-brands fa-square-linkedin icone"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <header id="header">
+        <nav class="navbar" id="nav">
+            <span>ferreirakaique</span>
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+                <span id="hamburger"></span>
+            </button>
+            <ul class="links" id="menu" role="menu">
+                <li><a href="#inicio_sec">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#certificacoes">Certificações</a></li>
+                <li><a href="#projetos_sec">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li>
+                    <a href="https://github.com/ferreirakaique" target="_blank">
+                        <i class="fa-brands fa-github icone"></i>
+                    </a> |
+                    <a href="https://www.linkedin.com/in/kaiqueferreira0/" target="_blank">
+                        <i class="fa-brands fa-square-linkedin icone"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
         <section id="inicio_sec" class="section">
             <div class="inicio_titulo">
                 <h1>Kaíque Ferreira</h1>
-                <h2 id="slogan_text">Construindo soluções em <span id="typing-text" id="typing-animation"></span></h2>
+                <h2 id="slogan_text">Construindo soluções em <span id="typing-text" id="typing-animation"></span>
+                </h2>
 
-                <p> Desenvolvedor Full Stack com experiência em React e Node.js desenvolvedor web e mobile, utilizando
+                <p> Desenvolvedor Full Stack com experiência em React e Node.js desenvolvedor web e mobile,
+                    utilizando
                     tecnologias como PHP, Python, MySQL,
                     Firebase,
                     HTML, CSS, JavaScript, React Native, Insomnia, Cloud Computing e Supabase.</p>
@@ -63,7 +72,8 @@
                             </div>
                             <p>
                                 Sou Kaique Ferreira, estudante de Análise e Desenvolvimento de Sistemas e
-                                desenvolvedor apaixonado por tecnologia. Tenho experiência com Node.js, React Native,
+                                desenvolvedor apaixonado por tecnologia. Tenho experiência com Node.js, React
+                                Native,
                                 PHP,
                                 MySQL, Firebase, Supabase, Python, HTML/CSS/JS, C++, C#, Git, Github, Linux, além de
                                 conhecimentos em cloud computing e boas práticas. Busco criar soluções digitais
@@ -177,7 +187,8 @@
                     </div>
                     <div class="projeto_content">
                         <h1>Senai Dev Experience</h1>
-                        <p>Site destinado a competidores que desejam informações completas sobre a competição SENAI DEV
+                        <p>Site destinado a competidores que desejam informações completas sobre a competição SENAI
+                            DEV
                             EXPERIENCE, datas de início, modelos de projetos, critérios de avaliação, edições
                             anteriores.</p>
                     </div>
@@ -207,7 +218,8 @@
                     </div>
                     <div class="projeto_content">
                         <h1>ConectaHub</h1>
-                        <p>Desenvolvimento de uma rede social inspirada no Instagram, com funcionalidades de postagens,
+                        <p>Desenvolvimento de uma rede social inspirada no Instagram, com funcionalidades de
+                            postagens,
                             interações entre usuários e compartilhamento de conteúdo.</p>
                     </div>
                     <div class="projeto_btn">
@@ -222,7 +234,8 @@
                     <div class="projeto_content">
                         <h1>História em Foco</h1>
                         <p>Plataforma destinada a ajudar estudantes a aprimorar seus conhecimentos em História,
-                            oferecendo conteúdos e recursos educativos para facilitar a preparação para vestibulares.
+                            oferecendo conteúdos e recursos educativos para facilitar a preparação para
+                            vestibulares.
                         </p>
                         <p>Principais tecnologias utilizadas:</p>
                     </div>
@@ -237,7 +250,8 @@
                     </div>
                     <div class="projeto_content">
                         <h1>TechWoman’s Day</h1>
-                        <p>Site desenvolvido para o evento TechWoman’s Day, destacando a trajetória e contribuições de
+                        <p>Site desenvolvido para o evento TechWoman’s Day, destacando a trajetória e contribuições
+                            de
                             grandes mulheres na tecnologia, como Grace Hopper e Katherine Johnson, em uma plataforma
                             informativa e interativa.</p>
                     </div>
@@ -252,7 +266,8 @@
                     </div>
                     <div class="projeto_content">
                         <h1>Matemática Financeira</h1>
-                        <p>Uma ferramenta prática para simplificar o controle financeiro diário, ajudando na organização
+                        <p>Uma ferramenta prática para simplificar o controle financeiro diário, ajudando na
+                            organização
                             das despesas e promovendo o bem-estar financeiro de seus usuários.</p>
                     </div>
                     <div class="projeto_btn">
@@ -313,6 +328,56 @@
             <p id="direitos"> © 2025 Todos os direitos reservados.</p>
         </div>
     </footer>
+    <button id="backToTop" title="Voltar ao topo">↑</button>
+
 </body>
+
+<script>
+    const btnMobile = document.getElementById('btn-mobile');
+    const nav = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.navbar ul li a');
+    const backToTop = document.getElementById('backToTop');
+
+    // --- MENU RESPONSIVO ---
+    btnMobile.addEventListener('click', () => {
+        if (nav.classList.contains('active')) {
+            nav.classList.add('closing');
+            setTimeout(() => {
+                nav.classList.remove('active', 'closing');
+            }, 100);
+        } else {
+            nav.classList.add('active');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (nav.classList.contains('active')) {
+                nav.classList.add('closing');
+                setTimeout(() => {
+                    nav.classList.remove('active', 'closing');
+                }, 100);
+            }
+        });
+    });
+
+    // --- BOTÃO BACK TO TOP ---
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+
 
 </html>
